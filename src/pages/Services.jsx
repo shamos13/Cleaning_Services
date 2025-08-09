@@ -50,7 +50,97 @@ const Services = () => {
             image: null,
             features: ['Comprehensive inspection', 'Safe treatment methods', 'Prevention strategies', 'Follow-up service']
         }
-    ]
+    ];
+    return(
+        <section className="py-20 bg-muted">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header info*/}
+                <div className="text-center mb-16 animate-fade-in">
+                    <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                        Our Cleaning Services
+                    </h2>
+                    <p className="text-xl max-w-3xl mx-auto">
+                        From regular home maintenance to specialized commercial cleaning,
+                        we offer comprehensive solutions tailored to your needs.
+                    </p>
+                </div>
+
+                {/* Services Grid*/}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {services.map((service, index) => {
+                        const IconComponent = service.icon;
+                        return(
+                            <div
+                                key={service.id}
+                                style={{animationDelay: `${index + 0.1}s`}}
+                            >
+                                {/*Services Image or Icon */}
+                                <div className="relative h-48 mb-6 rounded-lg overflow-hidden">
+                                    {service.image ? (
+                                        <img
+                                            src={service.image}
+                                            alt={service.title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    ): (
+                                        <div className="w-full h-full flex items-center justify-center">
+                                            <IconComponent className="h-20 w-20 text-white"/>
+                                        </div>
+                                    )}
+                                    <div className="absolute top-4 left-4 bg-white rounded-full p-3 shadow-lg">
+                                        <IconComponent className="h-6 w-6 text-white"/>
+                                    </div>
+                                </div>
+
+                                {/* Service Content */}
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-3">
+                                        {service.title}
+                                    </h3>
+                                    <p className="mb-4 leading-relaxed">
+                                        {service.description}
+                                    </p>
+
+                                    {/* Features List */}
+                                    <ul className="space-y-2 mb-6">
+                                        {service.features.map((feature, featureIndex) => (
+                                            <li key={featureIndex} className="flex items-center text-sm ">
+                                                <div className="w-2 h-2 rounded-full mr-3 flex-shrink-0"></div>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    {/* Action Button */}
+                                    <button className="w-full bg-[#E52223] text-sm py-2">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+                {/* Bottom CTA */}
+                <div className="text-center mt-16">
+                    <div className="rounded-2xl p-8 text-white">
+                        <h3 className="text-2xl font-bold mb-4">Ready To Get Started?</h3>
+                        <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+                            Contact us today for a free consultation and personalized quote.
+                            Let us help you maintain a clean, healthy environment.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <buttton className="bg-[#E52223] px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+                                Get Free Quote
+                            </buttton>
+                            <button className="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                                Call Now: +254724
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
 }
 
 export default Services;
