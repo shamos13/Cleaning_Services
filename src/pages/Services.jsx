@@ -133,7 +133,7 @@ const Services = () => {
                                 Get Free Quote
                             </buttton>
                             <button className="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-white/20 hover:scale-105">
-                                Call Now: +254724
+                                Call Now: +254724681055
                             </button>
                         </div>
                     </div>
