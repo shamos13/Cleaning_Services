@@ -19,7 +19,7 @@ const NavBar = () => {
     return (
         <nav className="bg-white shadow-lg sticky top-0 z-50">
             {/* Banner */}
-            <div className="bg-red-300 text-white py-2">
+            <div className="bg-[#FD0706] text-white py-2">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center text-sm">
                         <div className="flex items-center space-x-6">
@@ -62,8 +62,8 @@ const NavBar = () => {
                                     to={link.path}
                                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                                         isActive(link.path)
-                                            ? "text-black bg-blue-300"
-                                            : "text-gray-800 hover:text-blue-500"
+                                            ? "text-white bg-[#C04846]"
+                                            : "text-gray-800 hover:text-[#A91F21]"
                                     }`}
                                 >
                                     {link.name}
@@ -76,7 +76,7 @@ const NavBar = () => {
                     <div className="hidden md:block">
                         <Link
                             to="/contact"
-                            className="px-8 py-2 rounded-full bg-red-300 text-white hover:bg-red-400"
+                            className="px-8 py-2 rounded-full bg-[#E52223] text-white hover:bg-[#A91F21]"
                         >
                             Get Free Quote
                         </Link>

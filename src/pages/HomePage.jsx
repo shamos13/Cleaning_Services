@@ -4,7 +4,6 @@ function HomePage() {
     return (
         <>
             <NavBar />
-            <h1 className="text-center text-red-700">Everything is working</h1>
         </>
     )
 }
