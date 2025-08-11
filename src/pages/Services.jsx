@@ -127,7 +127,7 @@ const Services = () => {
                     })}
                 </div>
                 {/* Bottom CTA */}
-                <div className="bg-[#FD0706] text-center mt-16">
+                <div className="bg-[#C04846] text-center mt-16">
                     <div className="rounded-2xl p-8 text-white bg">
                         <h3 className="text-2xl font-bold mb-4">Ready To Get Started?</h3>
                         <p className="text-white/90 mb-6 max-w-2xl mx-auto">
